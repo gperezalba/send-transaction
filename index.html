@@ -17,7 +17,7 @@
                 let response = await customHttpProvider.sendTransaction(signedTransaction);
                 let receipt = await response.wait();
                 console.log(receipt);
-                document.getElementById("response").innerHTML = receipt;
+                document.getElementById("response").innerHTML = JSON.stringify(receipt);
             } catch(err) {
                 console.error(err.message);
                 document.getElementById("response").innerHTML = err.message;
