@@ -15,7 +15,7 @@
             const customHttpProvider = getProvider();
             try {
                 let response = await customHttpProvider.sendTransaction(signedTransaction);
-                let receipt = response.wait();
+                let receipt = await response.wait();
                 console.log(receipt);
                 document.getElementById("response").innerHTML = receipt;
             } catch(err) {
